@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss/types"
+import forms from "@tailwindcss/forms"
 
 export default {
   content: [
@@ -12,7 +13,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
+      },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [forms],
+} satisfies Config
